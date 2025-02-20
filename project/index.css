@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+.bowlby-one-regular {
+  font-family: "Bowlby One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fredoka-regular {
+  font-family: "Fredoka", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+:root {
+  --text-body-color: #eeeeee;
+  --top-linear-gradient: #FFAA4A;
+  --bottom-linear-gradient: #8ECAE6;
+  --card-background: rgba(245,245,245,0.18);
+  --drop-shadow: rgba(75,75,75,0.55);
+  --navbar-background: #ececec28;
+  --border-text-color: #2f2f2f;
+  --button-color: #03BB85;
+  --navbar-font-family: "Bowlby One", serif;
+  --title-font-family: "fredoka", serif;
+  --body-text-font: "Roboto", serif;
+  --title-text-size: 2.6rem;
+  --body-text-size: 1.4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to right bottom, var(--top-linear-gradient), var(--bottom-linear-gradient)) no-repeat;
+  color: var(--text-body-color);
+  background-attachment: fixed;
+}
+
+.img-back{
+  /* background: url("./Foto/Background.png") no-repeat !important; */
+}
+
+.navbar{
+  width: 100%;
+  background: none !important;
+  display: flex;
+  padding-top: 15px;
+}
+.navbar-back{
+  text-align: right;
+  font-family: var(--body-text-font);
+  font-size: var(--body-text-size);
+  font-weight: 800;
+  color: var(--bottom-linear-gradient);
+  text-decoration: underline;
+}
+.navbar-brand{
+  text-decoration: none;
+  color: var(--text-body-color);
+  padding: 15px;
+  display: block;
+  text-align: center;
+  -webkit-text-stroke: 2.5px var(--border-text-color);
+  font-family: var(--navbar-font-family);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background: var(--navbar-background);
+  border-radius: 15px;
+  box-shadow: 6px 6px 12px var(--drop-shadow);
+}
+.navbar a:hover{
+  color: var(--text-body-color);
+}
+.icon{
+  width: 2rem;
+  height: 2rem;
+}
+/* Card House - Home */
+.card-section{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  background: var(--navbar-background);
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 6px 6px 12px var(--drop-shadow);
+}
+/* Aumento della distanza superiore solo della 2 e 3 card */
+.card:nth-child(2), .card:nth-child(3){
+  margin-top: 2rem;
+}
+.card-img{
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 15px;
+  aspect-ratio: 2;
+  object-position: top;
+}
+.card-title{
+  font-size: var(--title-text-size);
+  color: var(--text-body-color);
+  -webkit-text-stroke: 3px var(--border-text-color);
+  /* font-family: var(--title-font-family); */
+  font-family: var(--navbar-font-family);
+  font-weight: bolder;
+  /* text-shadow: 2px 3px 6px var(--drop-shadow); */
+}
+.card-link{
+  text-decoration: none;
+  color: var(--text-body-color);
+  font-family: var(--title-font-family);
+  font-size: var(--body-text-size);
+  font-weight: bolder;
+}
+button:has(.card-link){
+  padding: 4px 20px;
+  border-radius: 8px;
+  background-color: var(--button-color);
+}
+button:has(.card-link):hover{
+  background-color: var(--button-color);
+}
+.card-text{
+  font-family: var(--body-text-font);
+  font-size: var(--body-text-size);
+  color: var(--text-body-color);
+}
+/* PreFooter */
+hr{
+  height: 5px;
+  background-color: #023047;
+  /* background-color: #01151f; */
+  border: none;
+  opacity: 1;
+  box-shadow: 4px 6px 8px var(--drop-shadow);
+}
+/* Footer - Contatti */
+footer:has(.contatti){
+  /* background: url("./Foto/Footer.png"), no-repeat; */
+  padding: 10px 40px;
+}
+.contatti{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-body-color);
+  font-family: var(--body-text-font);
+  font-size: var(--body-text-size);
+}
+/* Modifica stile degli elementi cliccabili */
+a{
+  color: var(--text-body-color);
+  text-decoration: none;
+}
+
+/* Primary pagina casa */
+.primary{
+  margin-left: 3rem;
+}
+.primary > h1{
+  font-family: var(--title-font-family);
+  font-size: var(--title-text-size);
+  font-weight: bolder;
+}
+.primary > a{
+  font-family: var(--body-text-font);
+  font-size: var(--body-text-size);
+}
+
+/* Carosello foto casa */
+.carousel-inner{
+  background: var(--card-background);
+  box-shadow: 4px 6px 8px var(--drop-shadow);
+  border-radius: 15px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 500px; 
+  object-fit: contain; 
+  padding: 10px;
+} 
+
+.container > #carouselExampleIndicators{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.carousel-indicators{
+  background-color: var(--card-background);
+  box-shadow: 4px 6px 8px var(--drop-shadow);
+  position: relative;
+  top: 20px;
+  border-radius: 15px;
+  padding: 0 10px 0 10px;
+}
+
+.carousel-indicators button {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  background-color: #4b4b4b73 !important;
+  border: none; 
+  opacity: 1;
+  margin: 5px; /* Spaziatura tra i cerchi */
+}
+
+.carousel-indicators .active {
+  background-color: #4b4b4b !important; /* Colore quando attivo */
+}
+
+/* Modale a schermo intero */
+.modal-content img {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* Info */
+.info{
+  margin: 20px;
+}
+.info h3{
+  font-family: var(--title-font-family);
+  font-size: var(--title-text-size);
+}
+.info p{
+  font-family: var(--body-text-font);
+  font-size: var(--body-text-size);
+}
+.service-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 0;
+}
+.service{
+  display: flex;
+  margin: 0 10px 0 0;
+}
+
+.icon-service{
+  margin: 0 10px;
+  width: 35px;
+  height: 35px;
+  color: rgb(54, 54, 54);
+  stroke-width: 2.5px;
+}
+
+/* Responsive */
+/* Telefono */
+@media (max-width: 767px){
+  .contatti{
+    flex-direction: column;
+  }
+  .carousel-indicators{
+    width: 90%;
+    padding: 10px;
+  }
+  .carousel-indicators button{
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
