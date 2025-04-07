@@ -47,10 +47,6 @@ body {
   background-attachment: fixed;
 }
 
-.img-back{
-  /* background: url("./Foto/Background.png") no-repeat !important; */
-}
-
 .navbar{
   width: 100%;
   background: none !important;
@@ -101,8 +97,8 @@ body {
   border: none;
   box-shadow: 6px 6px 12px var(--drop-shadow);
 }
-/* Aumento della distanza superiore solo della 2 e 3 card */
-.card:nth-child(2), .card:nth-child(3){
+/* Aumento della distanza superiore solo della 2 card */
+.card:nth-child(2){
   margin-top: 2rem;
 }
 .card-img{
@@ -116,10 +112,8 @@ body {
   font-size: var(--title-text-size);
   color: var(--text-body-color);
   -webkit-text-stroke: 3px var(--border-text-color);
-  /* font-family: var(--title-font-family); */
   font-family: var(--navbar-font-family);
   font-weight: bolder;
-  /* text-shadow: 2px 3px 6px var(--drop-shadow); */
 }
 .card-link{
   text-decoration: none;
@@ -145,14 +139,12 @@ button:has(.card-link):hover{
 hr{
   height: 5px;
   background-color: #023047;
-  /* background-color: #01151f; */
   border: none;
   opacity: 1;
   box-shadow: 4px 6px 8px var(--drop-shadow);
 }
 /* Footer - Contatti */
 footer:has(.contatti){
-  /* background: url("./Foto/Footer.png"), no-repeat; */
   padding: 10px 40px;
 }
 .contatti{
@@ -244,13 +236,16 @@ a{
   font-family: var(--body-text-font);
   font-size: var(--body-text-size);
 }
+li{
+  font-size: var(--body-text-size);
+}
 .service-container{
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: start;
-  padding: 0;
+  padding: 20px 0;
 }
 .service{
   display: flex;
